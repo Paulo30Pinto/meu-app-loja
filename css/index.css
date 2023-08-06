@@ -1,0 +1,237 @@
+@media (min-width: 850px) {
+     #div_loja{
+        display: none;
+     }
+  }
+
+  body{
+   font-size: 16px;
+   background-color: rgb(222, 222, 222);
+
+  }
+  .nomelogo{
+   text-shadow: 2px 1px gray;
+   text-transform: uppercase;
+   font-family: 'poppins';
+   margin-bottom: -5px;
+   margin-top: 5px;
+  }
+
+#div_login{
+    max-width: 100%;
+}
+.bb{
+
+   border: 1px solid #242424;
+}
+
+#img_perfil{
+   width: 74px;
+   height: 74px;
+   border-radius: 50px;
+   border: 2px solid #f6497e;
+}
+.offcanvas-header{
+   height: 40px!important;
+}
+.offcanvas{
+   height: 100vh!important;
+}
+
+#div_pesquisa{
+   width: 90%;
+   margin: auto;
+
+}
+.input_pesq_prod{
+ background-color: #e5e5e5!important;
+}
+.span_cabeca{
+   margin: 5px;
+}
+
+/* CAIXA DE VENDA */
+#div_home{
+
+  /* border: 2px solid red; */
+    margin-top: 10em;
+   height: 80vh;
+/*   width: 100%; */
+}
+
+#div_chugos{
+
+
+}
+.img_chugos{
+   border: 2px solid #700542;
+   width: 60px;
+   height: 60px;
+   margin: 2px;
+   border-radius: 50px;
+}
+
+#div_produto{
+   border: 1px solid rgb(153, 151, 151);
+}
+#div_produtos table{
+ /*  border: 2px solid black; */
+
+}
+#div_produto p{
+   margin-bottom: 7px;
+}
+
+.img_produtos{
+   width: 20%;
+   height: 8vh;
+   margin-left: 10px;
+   border: 1px solid black;
+}
+.img_produto{
+   max-width: 100%;
+   height: 25vh;
+}
+#div_leitor{
+   border: 2px dashed rgb(153, 151, 151);
+   width: 100%;
+   height: 100vh;
+
+}
+.offcanvas-top{
+   height: 90vh;
+}
+
+.rodape{
+   height: 30px;
+   color: white!important;
+}
+.div_bt_unico{
+   margin: auto;
+   width: 150px;
+}
+.subRodape{
+   height: 100vh;
+   border-top: 2px solid white;
+   color: white!important;
+   margin-bottom: auto;
+}
+.bt_rodape{
+   background-color: #d30077;
+}
+.r_nome{
+   margin-top: -25px;
+}
+
+.modal-header{
+   background-color: #d30077 !important;
+}
+/* PARTE DO STOCK */
+
+#div_prod_stock img{
+   border: 2px solid #700542;
+   width: 110px;
+   height: 110px;
+   margin: 2px;
+
+}
+
+
+/**MENU ROLAR**/
+.navegacao{
+   display: flex;
+   flex-wrap: nowrap;
+   overflow-x: auto !important;
+   max-width: 100%;
+}
+.navegacao::-webkit-scrollbar{
+   display: none;
+}
+
+#div_produtos{
+  /* border: solid 2px yellow; */
+   max-height: 80vh !important;
+   overflow-y: auto !important;
+   padding-bottom: 1rem;
+}
+#div_produtos::-webkit-scrollbar{
+   display: none;
+}
+
+/**STOCK**/
+#dadosStoque .col{
+   position: relative !important;
+
+}
+#dadosStoque .bi-chevron-double-up{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   background-color: rgba(214, 18, 129, 0.769);
+   color: #fafafa;
+   font-weight: bold;
+}
+.info{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   padding-top: 3vh;
+}
+.info .bi-chevron-double-down{
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: rgba(214, 18, 129, 0.769);
+   color: #fafafa;
+   font-weight: bold;
+   min-width: 100%;
+}
+.div_mais {
+   border:  2px solid rgb(165, 165, 165);
+   width: 100%;
+   height: 100vh;
+}
+.div_mais p{
+   margin: 1px;
+}
+#history img, .res_pesq img{
+   max-width: 100px;
+   max-height: 100px;
+}
+#history h4, .res_pesq h4{
+ font-size: 12px;
+}
+#history p, .res_pesq p{
+ font-size: 11px;
+}
+
+.item-pesq{
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(250, 250, 250, .9);
+  border-bottom: 1px solid rgba(1, 1, 1, .9);
+}
+
+.bg-rosa{
+  background-color: #dc3593 !important;
+  color: #fafafa;
+
+}
+.bg-rosa:hover{
+  background-color: #fafafa !important;
+  color: #dc3593;
+  border: solid 1px #dc3593;
+
+}
+.text-rosa{
+  color: #dc3593 !important;
+}
+#offcanvasTop_compra .curva{
+  height: 71vh !important;
+  overflow-y: auto;
+/*  border: solid 2px red; */
+}

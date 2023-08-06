@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lojas</title>
+    <script src="bibliotecas/jQuery-3.6.1.min.js"></script>
+    <script src="bibliotecas/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bibliotecas/bootstrap.min.css">
+    <link href="css/signin.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="bibliotecas/bootstrap-icons.css" rel="stylesheet">
+    <script src="js/index.js"></script>
+    <script src="bibliotecas/popover.js"></script>
+     
+</head>
+<body class="">
+
+    <div id = "div_login" class="text-center div_largura d-none ">
+        <main class="form-signin">
+            <form>
+              <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+              <h1 class="h3 mb-3 fw-normal">Login</h1>
+          
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Nome</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+          
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+              </div>
+              <button id = "bt_login" class="w-100 btn btn-lg btn-primary" type="button">Entrar</button>
+              <p class="mt-5 mb-3 text-muted">&copy; 2023–2025</p>
+            </form>
+          </main>
+    </div>
+
+   <!--DENTRO DA LOJA-->
+    <div id = "div_loja" class="container">
+          <header class="fixed-top  shadow-sm text-white cor_tema" id="cabecalho">
+              <h2 class="text-center nomelogo">Arrimo</h2>
+              <div id="div_pesquisa" class="d-flex py-2" style="">
+                
+                <span class="input-group-text shadow-sm bt_pesq_prod text-white span_cabeca cor_ico" style="margin-left: -10px;" ><i class="bi bi-calendar-week-fill"></i></span>
+                <input type="text" class="form-control input_pesq_prod input-group-text span_cabeca" placeholder="Pesquisar Produtos">
+                <span class="input-group-text shadow-sm bt_pesq_prod text-white span_cabeca cor_ico" id="bt_pesq_prod_cod" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"><i class="bi bi-upc-scan"></i></span>
+                <span class="input-group-text shadow-sm bt_pesq_prod text-white position-relative span_cabeca cor_ico" id="bt_pesq_prod_cod" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop_compra" aria-controls="offcanvasTop"><i class="bi bi-cart-check-fill"></i>
+                  
+                  <span class="badge bg-danger badge-number rounded-circle position-absolute opacity-75" style="left: 10px; top: -10px;">0</span>
+                </span>
+               <span data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="font-size: 27px; margin-right: -15px;"><i class="bi bi-three-dots-vertical bt_pontos" height = "100"></i></span>
+              </div>
+                
+            <select class="form-select text-center form-select-sm" name="" id="" style="background-color: rgb(214, 214, 214);">
+              <option value="">Todos produtos</option>
+              <option value="">Mais comprados</option>
+              <option value="">Menos comprados</option>
+              
+            </select>
+            <div class="nav-scroller bg-dark w-100 rounded" id="div_chugos">
+              <nav class="nav bg-light navegacao shadow-sm rounded" aria-label="Secondary navigation"  id="nav-tab" role="tablist" style="">
+                <span><img src="img/loja_1/chugo_1.jpg" class="img_chugos" alt=""></span>
+                <span><img src="img/loja_1/chugo_2.jpg" class="img_chugos" alt=""></span>
+                <span><img src="img/loja_1/chugo_3.jpg" class="img_chugos" alt=""></span>
+                <span data-bs-toggle="modal" data-bs-target="#modal_pao"><img src="img/loja_1/pao.jpg" class="img_chugos" alt=""></span>
+                <span><img src="img/loja_1/farinha.jpeg" class="img_chugos" alt=""></span>
+                <span><img src="img/loja_1/fuba_1.jpg" class="img_chugos" alt=""></span>
+                <span><img src="img/loja_1/fuba_2.jpg" class="img_chugos" alt=""></span>
+              </nav>
+            </div>
+          </header>
+         
+          <div id = "div_home" class="container-fluid"><br>
+            
+              <div class="rounded shadow-sm text-dark" id = "div_produtos">
+           
+                  <table class="table table-striped table-borderless">
+                    <tbody>
+
+                      <tr>
+                        <td>
+                        
+                            <div class="bd-highlight d-flex align-items-center position-relative">
+                                <img src="img/loja_1/arroz.jpg" alt="" class="bd-placeholder-img flex-shrink-0 me-2 rounded img_produtos"   role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <div class="d-flex flex-column " style="width: 100%;">
+                                  <p class="col-12" style="margin-bottom: -1px;">
+                                    <strong class="d-block text-dark">Arroz patriota 1kg</strong>
+                                  </p>
+                                  <div class="d-flex align-items-center" style="margin-bottom: -15px;">
+                                      <p class="w-100" ><label for="" class="text-dark">10 Stock<br>1000,00 Kz</label></p>
+                                        <div class="p-2 flex-shrink-1 bd-highlight"  >
+                                          <div class="btn-group" >
+                                              <label class="btn btn-outline-secondary  bb" data-bs-toggle="modal" data-bs-target="#exampleModalDefault"><i class="bi bi-bag-check-fill"></i></label>
+                                              <input type="checkbox" class="btn-check btn-sm " id="btn-check-outlined" autocomplete="off">
+                                              <label class="btn btn-outline-secondary  bb" for="btn-check-outlined"><i class="bi bi-cart-check-fill"></i></label>
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                          
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        
+                          <div class="bd-highlight d-flex align-items-center position-relative">
+                              <img src="img/loja_1/compal.jpeg" alt="" class="bd-placeholder-img flex-shrink-0 me-2 rounded img_produtos"   role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <div class="d-flex flex-column " style="width: 100%;">
+                                <p class="col-12" style="margin-bottom: -1px;">
+                                  <strong class="d-block text-dark">Compal  1L</strong>
+                                </p>
+                                <div class="d-flex align-items-center" style="margin-bottom: -15px;">
+                                    <p class="w-100" ><label for="" class="text-dark">17 Stock<br>1500,00 Kz</label></p>
+                                      <div class="p-2 flex-shrink-1 bd-highlight"  >
+                                        <div class="btn-group" >
+                                            <label class="btn btn-outline-secondary   bb"><i class="bi bi-bag-check-fill"></i></label>
+                                            <input type="checkbox" class="btn-check btn-sm " id="btn-check-outlined_1" autocomplete="off">
+                                            <label class="btn btn-outline-secondary   bb" for="btn-check-outlined_1"><i class="bi bi-cart-check-fill"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                        
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        
+                          <div class="bd-highlight d-flex align-items-center position-relative">
+                              <img src="img/loja_1/agua.jpg" alt="" class="bd-placeholder-img flex-shrink-0 me-2 rounded img_produtos"   role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <div class="d-flex flex-column " style="width: 100%;">
+                                <p class="col-12" style="margin-bottom: -1px;">
+                                  <strong class="d-block text-dark">Agua pura  500ml</strong>
+                                </p>
+                                <div class="d-flex align-items-center" style="margin-bottom: -15px;">
+                                    <p class="w-100" ><label for="" class="text-dark">12 Stock<br>250,00 Kz</label></p>
+                                      <div class="p-2 flex-shrink-1 bd-highlight"  >
+                                        <div class="btn-group" >
+                                            <label class="btn btn-outline-secondary   bb"><i class="bi bi-bag-check-fill"></i></label>
+                                            <input type="checkbox" class="btn-check btn-sm " id="btn-check-outlined_2" autocomplete="off">
+                                            <label class="btn btn-outline-secondary   bb" for="btn-check-outlined_2"><i class="bi bi-cart-check-fill"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                        
+                      </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        
+                          <div class="bd-highlight d-flex align-items-center position-relative">
+                              <img src="img/loja_1/oleo.jpg" alt="" class="bd-placeholder-img flex-shrink-0 me-2 rounded img_produtos"   role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <div class="d-flex flex-column " style="width: 100%;">
+                                <p class="col-12" style="margin-bottom: -1px;">
+                                  <strong class="d-block text-dark">Óleo alimo  1L</strong>
+                                </p>
+                                <div class="d-flex align-items-center" style="margin-bottom: -15px;">
+                                    <p class="w-100" ><label for="" class="text-dark">10 Stock<br>1500,00 Kz</label></p>
+                                      <div class="p-2 flex-shrink-1 bd-highlight"  >
+                                        <div class="btn-group" >
+                                            <label class="btn btn-outline-secondary   bb"><i class="bi bi-bag-check-fill"></i></label>
+                                            <input type="checkbox" class="btn-check btn-sm " id="btn-check-outlined_3" autocomplete="off">
+                                            <label class="btn btn-outline-secondary   bb" for="btn-check-outlined_3"><i class="bi bi-cart-check-fill"></i></label>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                        
+                      </td>
+                      </tr>
+                    
+                    
+                    </tbody>
+                  </table>
+                  
+               
+                
+              </div>
+               
+
+
+
+          </div>
+          <!--STOCK-->
+          <footer class="mt-auto text-white-50 fixed-bottom  shadow-lg  rodape cor_tema">
+            
+              <div class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                <span style="margin-left: -16vh;">Stock</span>
+                <span style="margin-left: 13vh;"><i style="margin-right: auto;" class="bi bi-chevron-compact-down"></i></span>
+              </div>
+              <div class="offcanvas offcanvas-bottom   subRodape py-1 text-center" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomtLabel">
+                  <div class="offcanvas-header cor_tema text-white">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Stock</h5><span class=""><input type="datetime-local" class="cor_ico text-white form-control input-sm" name="" id=""></span>
+                    <button type="button" class="btn-close bg-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                 </div>
+                 <input type="text" class="form-control" placeholder="pesquisar produtos">
+                <select style="background-color: rgb(220, 220, 220);" class="form-select text-center form-select-sm" name="" id="">
+                  <option value="">Todos produtos</option>
+                  <option value="">Mais comprados</option>
+                  <option value="">Menos comprados</option>
+                  <option value="">Comidas</option>
+                </select>
+          
+                <div class="container" id="dadosStoque">
+                  <div class="row row-cols-2 text-dark">
+                    <div class="col position-relative shadow-sm rounded" style="">
+                      <img src="img/loja_1/caixa compal.jpeg"  alt="" width="100%" height="150px">
+                      <a href="#" class="abrInfo"><i class="bi bi-chevron-double-up"></i></a>
+                      <div class="info card text-start">
+                        <a href="#" class="fechaInfo text-center" ><i class="bi bi-chevron-double-down"></i></a>
+                        <div class="div_mais">
+                          <h6 class="text-center py-0">Compal 1L</h6>
+                          <h6 class="text-center py-0" style="margin-top: -6px;">marca</h6>
+                          <p class="d-flex justify-content-between text-dark"><span><b>Stock</b></span><span class="text-danger">10 Uni</span></p>
+                          <p class="d-flex justify-content-between text-dark"><span><b>Venda</b></span><span class="text-danger">5 Uni</span></p>
+                          <p class="d-flex justify-content-between text-dark"><span><b>Local</b></span><span class="text-danger">50</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col position-relative shadow-sm rounded" style="">
+                      <img src="img/loja_1/saco arroz.jpg"  alt="" width="100%" height="150px">
+                      <a href="#" ><i class="bi bi-chevron-double-up"></i></a>
+
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+
+          </footer>
+
+    </div>
+
+   
+
+
+    <!--MENU DO PERFIL DO USUARIO-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header cor_tema text-white">
+         <h5 class="offcanvas-title" id="offcanvasRightLabel">Perfil</h5>
+         <button type="button" class="btn-close bg-white btn-sm" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body text-center">
+        <br><br>
+        <div><img class=""  id = "img_perfil"  src="img/loja_1/Celestino.jpg" alt=""><br><br>Celestino Fragoso</div><br>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Alterar perfil
+            <span class="" style="color: #f6497e;"><bi class="bi bi-arrow-right-circle-fill"></bi></span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            A second list item
+            <span class="badge bg-primary rounded-pill">2</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Venda dia:
+            <strong class="">192938475Kz</strong>
+          </li>
+        </ul>
+        
+      </div>
+    </div>
+
+    <!--MENU CODIGO DE BARRA-->
+    <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header cor_tema text-white">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel">Leitor de códigos</h5>
+        <button type="button" class="btn-close bg-white btn-sm" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+        <div id = "div_leitor" class="input-group mb-3 fixed-top shadow-lg" style="margin-top: 3em;">
+          <video id="video" style="width: 100%; height: auto;" ></video>
+          <script src = "bibliotecas/quagga.js">
+                  const config = {
+                        inputStream: {
+                        name: "Live",
+                        type: "LiveStream",
+                        target: document.querySelector("#video"),
+                    },
+                        decoder: {
+                        readers: ["code_128_reader", "ean_reader", "upc_reader", "qr_code_reader"],
+                        },
+                  };
+
+                  // Inicializa o QuaggaJS
+                  Quagga.init(config, (err) => {
+                     if (err) {
+                       console.error(err);
+                     return;
+                    }
+  
+                   // Inicia a leitura
+                    Quagga.start();
+  
+                    // Evento para capturar o código lido
+                    Quagga.onDetected((result) => {
+                    const code = result.codeResult.code;
+                    console.log("Código detectado:", code);
+    
+                      // Faça o que desejar com o código lido...
+                    });
+                  });
+          </script>
+       </div>
+    
+
+      </div>
+    </div>
+
+
+      <!--MODAL UNICO PRODUTO-->
+      <div class="modal fade " id="exampleModalDefault" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header offcanvas-header cor_tema text-white">
+              <h5 class="modal-title" id="exampleModalLabel">Compra única</h5>
+              <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+             
+                <div class="text-center shadow-sm card" id="div_produto">
+                  <div class="catalogo">
+                    <figure class="figure">
+                      <img src="img/loja_1/arroz.jpg" alt="" class="img_produto">
+                    </figure>
+                    <hr>
+                  </div>
+                  <h4 class="text-dark">Arroz patriota 1kg</h4>
+                  <p class="text-dark">1000,00Kz</p>
+                  <p class="text-dark">10 Stock</p>
+                  <p class="">  <input type="number" class="" id="validationDefault03" value="1" style="max-width: 95px;"></p>
+                  <p class="text-center ">
+                    <div class="btn-group div_bt_unico" >
+                      <label class="btn btn-outline-secondary"><i class="bi bi-bag-check-fill"></i></label>
+                      <input type="checkbox" class="btn-check btn-sm " id="btn-check-outlined_3" autocomplete="off">
+                      <label class="btn btn-outline-secondary" for="btn-check-outlined_3"><i class="bi bi-cart-check-fill"></i></label>
+                  </div>
+                  </p>
+                  
+                </div>
+
+            </div>
+            <div class="modal-footer">
+              
+                  <div class="card-body">
+                      <div class="conta">
+                          <p class="d-flex justify-content-between align-items-center text-dark"><span><b>Valor</b></span>
+                                <span class="input-group" style="max-width: 80%;">
+      
+                                  <input type="text" class="form-control" id="username" placeholder="insira valor pago...">
+                                  <span class="input-group-text">Kz</span>
+      
+                                </span>
+                          </p>
+                          <p class="d-flex justify-content-between text-dark"><span><b>Troco</b></span><span class="text-danger">1000Kz</span></p>
+                
+                      </div>
+                      <div class="d-grid gap-2 d-flex text-center btn-group">
+                        <button type="button" class="btn btn-primary btn-sm">Cash</button>
+                        <button type="button" class="btn btn-secondary btn-sm">TPA</button>
+                      </div>
+      
+                  </div>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal_pao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header offcanvas-header cor_tema text-white">
+              <h5 class="modal-title" id="exampleModalLabel">Compra única</h5>
+              <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+             
+                <div class="text-center shadow-sm card" id="div_produto">
+                  <div class="catalogo">
+                    <figure class="figure">
+                      <img src="img/loja_1/pao.jpg" alt="" class="img_produto">
+                    </figure>
+                    <hr>
+                  </div>
+                  <h4 class="text-dark">Pão frances pequeno</h4>
+                  <p class="text-dark">50,00Kz</p>
+                  <p class="text-dark">10 Stock</p>
+                  <p class="">  <input type="number" class="" id="validationDefault03" value="1" style="max-width: 95px;"></p>
+                  <p class="text-center ">
+                    <div class="btn-group div_bt_unico" >
+                      <label class="btn btn-outline-secondary"><i class="bi bi-bag-check-fill"></i></label>
+                      <input type="checkbox" class="btn-check btn-sm " id="btn-check-outlined_3" autocomplete="off">
+                      <label class="btn btn-outline-secondary" for="btn-check-outlined_3"><i class="bi bi-cart-check-fill"></i></label>
+                  </div>
+                  </p>
+                  
+                </div>
+
+            </div>
+            <div class="modal-footer">
+              
+                  <div class="card-body">
+                      <div class="conta">
+                          <p class="d-flex justify-content-between align-items-center text-dark"><span><b>Valor</b></span>
+                                <span class="input-group" style="max-width: 80%;">
+      
+                                  <input type="text" class="form-control" id="username" placeholder="insira valor pago...">
+                                  <span class="input-group-text">Kz</span>
+      
+                                </span>
+                          </p>
+                          <p class="d-flex justify-content-between text-dark"><span><b>Troco</b></span><span class="text-danger">1000Kz</span></p>
+                
+                      </div>
+                      <div class="d-grid gap-2 d-flex text-center btn-group">
+                        <button type="button" class="btn btn-primary btn-sm">Cash</button>
+                        <button type="button" class="btn btn-secondary btn-sm">TPA</button>
+                      </div>
+      
+                  </div>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--MENU CARRINHO-->
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop_compra" aria-labelledby="offcanvasTopLabel">
+        <div class="offcanvas-header cor_tema text-white">
+          <h5 class="offcanvas-title" id="offcanvasTopLabel">Compras</h5>
+          <button type="button" class="btn-close bg-white btn-sm" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <section class="section" >
+            <div class="">
+              <table class="table table-striped table-borderless">
+                <tbody>
+                  <tr>
+                  <td>
+                    <div class=" d-flex text-muted pt-1 destaques small lh-sm border-bottom linha_produtos">
+                      <img src="img/loja_1/arroz.jpg" alt="" class="bd-placeholder-img flex-shrink-0 me-2 rounded img_produtos" style="width: 65px; height: 65px;"  role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <div class="pb-3 mb-0 row w-100" style="margin-bottom: -1px;">
+                        <p class="col-12">
+                          <strong class="d-block text-dark">Arroz patriota 1kg</strong>
+                        </p>
+                        <div class="d-flex align-items-center justify-content-around col-12" style="margin-bottom: -15px;">
+                          <label for="" class="text-dark">10 Stock<br>1000,00 Kz</label>
+  
+                          <input type="number" class="" id="validationDefault03" value="1" style="max-width: 55px;">
+                          <a href="#" style="font-size: 21px;">
+                            <i class="text-danger bi bi-trash-fill"></i>
+                          </a>
+                        </div>
+                      </div>
+  
+                    </div>
+                  </td>
+                  </tr>
+                  <tr>
+                  
+                  </tr>
+                  <tr>
+                    
+                  </tr>
+                  
+                  
+                </tbody>
+               
+                
+              </table>
+         
+      
+              <div class="col-md-4 fixed-bottom ">
+      
+                <div class="card">
+                  <div class="card-body">
+                    
+                      <div class="conta">
+                          <p class="d-flex justify-content-between align-items-center text-dark"><span><b>Valor</b></span>
+                            <span class="input-group" style="max-width: 80%;">
+      
+                                  <input type="text" class="form-control" id="username" placeholder="insira valor pago...">
+                                  <span class="input-group-text">Kz</span>
+      
+                                </span>
+                          </p>
+                          <p class="d-flex justify-content-between text-dark"><span><b>Troco</b></span><span class="text-danger">1000Kz</span></p>
+                
+                      </div>
+                      <div class="d-grid gap-2 d-flex text-center btn-group">
+                        <button type="button" class="btn btn-primary btn-sm">Cash</button>
+                        <button type="button" class="btn btn-secondary btn-sm">TPA</button>
+                      </div>
+      
+                  </div>
+                </div><!-- End Border Badges -->
+      
+              </div>
+      
+            </div>
+          </section>
+  
+        </div>
+      </div>
+
+
+      <!--ALERTA-->
+      <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <img src="..." class="rounded me-2" alt="...">
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Hello, world! This is a toast message.
+          </div>
+        </div>
+      </div>
+      <!--FIM-->
+
+    
+
+      
+      
+</body>
+<script src=""></script>
+</html>
